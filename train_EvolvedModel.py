@@ -125,7 +125,7 @@ with tf.Session() as sess:
                                                   Y: test_labels,
                                                   keep_prob_1: 1.0,
                                                   keep_prob_2: 1.0})
-    print("\nAccuracy on test set:", acc)
+    print("\nAccuracy on test set:", test_accuracy)
 
     # pred
     pred = sess.run(p, feed_dict={X: test_img_new, Y: test_labels,

@@ -81,7 +81,7 @@ with tf.Session() as sess:
     # evaluate the accuracy of the model
     test_accuracy = sess.run(accuracy, feed_dict={X: test_img_new,
                                                   Y: test_labels})
-    print("\nAccuracy on test set:", acc)
+    print("\nAccuracy on test set:", test_accuracy)
 
     # pred
     pred = sess.run(p, feed_dict={X: test_img_new, Y: test_labels})
