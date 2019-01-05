@@ -71,7 +71,7 @@ with tf.Session() as sess:
 
         # Accuracy and cross entropy - Training phase
         loss, acc = sess.run([cross_entropy, accuracy],
-                             feed_dict={X: batch_x, Y: batch_y})
+                             feed_dict={X: valid_img_new, Y: valid_labels})
         loss_train.append(loss)
         acc_train.append(acc)
         print("\nEpoch", str(epoch), "Loss :", str(loss),
