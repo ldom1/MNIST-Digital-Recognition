@@ -51,6 +51,7 @@ loss_train = []
 
 # Train the neural network
 # initialize variables and session
+# Training
 with tf.Session() as sess:
     saver = tf.train.Saver()
     sess.run(tf.global_variables_initializer())
@@ -101,11 +102,20 @@ with tf.Session() as sess:
     # Close the session
     sess.close()
 
-# Visualisation of the accuracy and the loss
-plt.figure(figsize=(10, 7))
-plt.plot(np.arange(nb_epoch), acc_train, label='accuracy',
-         color='blue')
+# Visualisation of the accuracy
+plt.figure(figsize=(10, 6))
+plt.plot(np.arange(nb_epoch), acc_train, label='accuracy', color='blue')
+plt.title('Training phase')
+plt.ylabel('accuracy - training phase')
+plt.xlabel('epochs')
+plt.legend(loc='best')
+plt.show()
+
+# Visualisation of the loss
+plt.figure(figsize=(10, 6))
 plt.plot(np.arange(nb_epoch), loss_train, label='loss', color='red')
 plt.title('Training phase')
-plt.legend()
+plt.ylabel('loss - training phase')
+plt.xlabel('epochs')
+plt.legend(loc='best')
 plt.show()
