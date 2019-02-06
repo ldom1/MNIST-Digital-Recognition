@@ -1,6 +1,11 @@
 .DS_Store
 
 # Project related
+/train_CNN.py
+/train_EvolvedModel.py
+/train_BasicNetwork.py
+/nn_saved_sessions/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
